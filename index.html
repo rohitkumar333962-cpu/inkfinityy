@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="Inkfinity Tattoo Studio — tattoo art and studio concept in Ludhiana, Punjab.">
+<title>Inkfinity Tattoo Studio | Ludhiana</title>
+<style>
+:root{--bg:#0d0d0d;--panel:#171717;--panel2:#202020;--text:#f4f0e8;--muted:#aaa49b;--gold:#c9a56a;--line:#ffffff1b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topbar{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:fixed;top:0;width:100%;z-index:20;background:#101010e8;backdrop-filter:blur(12px)}
+.logo{font:25px Georgia,serif;letter-spacing:2px}.logo span,.gold{color:var(--gold)}.nav{display:flex;gap:25px;color:#ddd;font-size:12px;letter-spacing:1px;text-transform:uppercase}.nav a:hover{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:9px 12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border:1px solid var(--gold);background:transparent;color:var(--text);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;transition:.2s}.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.hero{min-height:760px;display:flex;align-items:center;padding:145px 9% 100px;position:relative;background:linear-gradient(90deg,#080808 0%,#080808e8 42%,#0808083d 100%),url('https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 28%);pointer-events:none}.hero-content{max-width:660px;position:relative;z-index:1}.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:10px;font-weight:bold}.hero h1{font:clamp(58px,9vw,112px)/.92 Georgia,serif;margin:23px 0}.hero h1 em{color:var(--gold);font-weight:normal}.hero p{max-width:490px;color:#c6c0b7;line-height:1.85;font-size:15px}.hero-actions{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}.hero-note{font-size:11px!important;color:#aaa!important;margin-top:24px}
+section{padding:90px 8%}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}.section-head h2{font:clamp(36px,5vw,58px) Georgia,serif;margin:12px 0 0}.section-head p{max-width:410px;color:var(--muted);line-height:1.7;font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;background:#151515}.about-photo{height:490px;position:relative}.about-photo img{width:100%;height:100%;object-fit:cover;display:block}.photo-tag{position:absolute;bottom:18px;left:18px;background:var(--gold);color:#111;padding:12px 16px;font-size:10px;letter-spacing:2px;text-transform:uppercase}.about-copy h2{font:clamp(38px,5vw,60px) Georgia,serif;margin:14px 0 20px}.about-copy p{color:var(--muted);line-height:1.9;font-size:14px}.stats{display:flex;gap:30px;margin-top:28px;border-top:1px solid var(--line);padding-top:23px}.stats strong{display:block;font:30px Georgia,serif;color:var(--gold)}.stats small{color:var(--muted);font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.services{background:var(--bg)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service{padding:26px;background:var(--panel);border:1px solid var(--line);min-height:190px}.service .num{color:var(--gold);font-size:11px;letter-spacing:2px}.service h3{font:25px Georgia,serif;margin:16px 0 10px}.service p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.styles{background:#141414}.style-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.style-card{background:var(--panel);padding:24px 20px;border:1px solid var(--line);min-height:165px;transition:.25s}.style-card:hover{border-color:var(--gold);transform:translateY(-4px)}.style-card b{font:25px Georgia,serif;color:var(--gold);display:block;margin-bottom:15px}.style-card h3{font:21px Georgia,serif;margin:0 0 9px}.style-card p{color:var(--muted);font-size:12px;line-height:1.6;margin:0}
+.gallery{background:#0d0d0d}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 15px;font-size:10px;letter-spacing:1px;text-transform:uppercase}.filter.active,.filter:hover{background:var(--gold);color:#111;border-color:var(--gold)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:245px;gap:13px}.gallery-item{overflow:hidden;position:relative;background:#242424}.gallery-item[hidden]{display:none}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.gallery-item:hover img{transform:scale(1.06)}.gallery-item span{position:absolute;bottom:0;left:0;right:0;padding:34px 16px 15px;background:linear-gradient(transparent,#000d);font:20px Georgia,serif}
+.booking{background:#171512}.booking-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.booking-copy h2{font:clamp(38px,5vw,58px) Georgia,serif;margin:13px 0 18px}.booking-copy p{color:var(--muted);line-height:1.8;font-size:14px}.booking-points{list-style:none;padding:0;margin:25px 0}.booking-points li{padding:10px 0;border-bottom:1px solid var(--line);color:#d4cec4;font-size:13px}.booking-points li:before{content:"✦";color:var(--gold);margin-right:12px}
+.form-card{background:#0e0e0e;border:1px solid var(--line);padding:30px}.form-card h3{font:28px Georgia,serif;margin:0 0 8px}.form-card>p{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 23px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#d4cec4}.field input,.field select,.field textarea{width:100%;background:#1b1b1b;border:1px solid #ffffff25;color:white;padding:13px;outline:none;border-radius:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.field textarea{min-height:90px;resize:vertical}.check{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:11px;line-height:1.6;margin:18px 0}.check input{accent-color:var(--gold);margin-top:2px}.form-card button{width:100%}.form-msg{display:none;margin-top:15px;padding:14px;border:1px solid #c9a56a66;color:#e6d3b1;font-size:12px;line-height:1.6}.form-msg.show{display:block}
+.faq{background:#101010}.faq-list{max-width:850px;margin:auto}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:var(--text);padding:21px 0;display:flex;justify-content:space-between;text-align:left;font:20px Georgia,serif}.faq-q span{color:var(--gold);font:20px Arial}.faq-a{display:none;color:var(--muted);font-size:13px;line-height:1.8;padding:0 35px 20px 0}.faq-item.open .faq-a{display:block}
+.notice{background:#211d17;border:1px solid #c9a56a55;padding:20px 23px;margin-top:35px;color:#d5c8b5;line-height:1.7;font-size:12px}.notice strong{color:var(--gold)}
+footer{padding:38px 8%;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:11px}.footer-logo{font:24px Georgia,serif;color:var(--text)}.footer-logo span{color:var(--gold)}
+@media(max-width:850px){.topbar{padding:0 5%}.nav{display:none;position:absolute;top:75px;left:0;right:0;background:#111;padding:22px 6%;flex-direction:column;gap:20px}.nav.open{display:flex}.menu{display:block}.hero{min-height:700px;padding:130px 7% 80px;background-position:58% center}.about,.booking-layout{grid-template-columns:1fr;gap:35px}.about-photo{height:370px}.style-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}.service-grid{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:14px}footer{flex-direction:column;align-items:flex-start}}
+@media(max-width:480px){.logo{font-size:21px}.hero h1{font-size:59px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.style-grid{gap:8px}.style-card{padding:18px 14px}.gallery-grid{grid-auto-rows:165px;gap:8px}.service-grid{grid-template-columns:1fr}.form-card{padding:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.stats{gap:18px}.stats strong{font-size:25px}.gallery-item span{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <a class="logo" href="#home">INK<span>FINITY</span>.</a>
+ <nav class="nav" id="nav"><a href="#about">Our story</a><a href="#services">Services</a><a href="#styles">Styles</a><a href="#gallery">Gallery</a><a href="#booking">Booking</a><a href="#faq">FAQs</a></nav>
+ <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-content">
+ <div class="eyebrow">Tattoo art · Ludhiana, Punjab</div><h1>Wear your<br><em>story.</em></h1>
+ <p>Where imagination meets ink. Explore expressive tattoo styles, design inspiration and the craft behind every piece at Inkfinity Tattoo Studio.</p>
+ <div class="hero-actions"><a class="btn primary" href="#booking">Explore booking</a><a class="btn" href="#gallery">View gallery</a></div>
+ <p class="hero-note">A tattoo is personal. Take your time, ask questions and make an informed choice.</p>
+</div></section>
+
+<section class="about" id="about">
+ <div class="about-photo"><img src="https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1100&q=85" alt="Tattoo artist at work" loading="lazy"><div class="photo-tag">Art with intention</div></div>
+ <div class="about-copy"><div class="eyebrow">A little about us</div><h2>More than ink.<br>It's expression.</h2>
+ <p>Inkfinity is a tattoo-studio concept based in Ludhiana, built around creativity, individuality and respect for the art form. From delicate linework to bold illustrative pieces, every design begins with an idea and a story.</p>
+ <p>Our visual approach is simple: thoughtful designs, careful craft and a studio culture that puts hygiene, informed choices and professionalism first.</p>
+ <div class="stats"><div><strong>∞</strong><small>Ideas to explore</small></div><div><strong>01</strong><small>Personal story</small></div><div><strong>100%</strong><small>Creative spirit</small></div></div></div>
+</section>
+
+<section class="services" id="services">
+ <div class="section-head"><div><div class="eyebrow">What to explore</div><h2>Studio services</h2></div><p>Use these categories to describe the kind of artwork you have in mind. Availability and actual services must be confirmed directly with a verified studio.</p></div>
+ <div class="service-grid">
+  <article class="service"><span class="num">01 / CUSTOM ART</span><h3>Custom concepts</h3><p>Personalised design ideas shaped around a theme, reference and preferred visual style.</p></article>
+  <article class="service"><span class="num">02 / STYLE IDEAS</span><h3>Style consultation</h3><p>Explore fine-line, blackwork, realism and geometric aesthetics before making a decision.</p></article>
+  <article class="service"><span class="num">03 / DESIGN CHAT</span><h3>Design discussion</h3><p>Think through scale, placement, meaning, permanence and questions to ask a qualified artist.</p></article>
+ </div>
+</section>
+
+<section class="styles" id="styles">
+ <div class="section-head"><div><div class="eyebrow">Find your aesthetic</div><h2>Art styles</h2></div><p>Every style has its own character. Explore a few popular visual directions and discover what speaks to you.</p></div>
+ <div class="style-grid">
+  <article class="style-card"><b>01</b><h3>Fine Line</h3><p>Delicate details, subtle shapes and elegant linework.</p></article>
+  <article class="style-card"><b>02</b><h3>Blackwork</h3><p>Bold contrast, strong shapes and striking compositions.</p></article>
+  <article class="style-card"><b>03</b><h3>Realism</h3><p>Portrait-inspired art with depth, texture and dimension.</p></article>
+  <article class="style-card"><b>04</b><h3>Geometric</h3><p>Symmetry, patterns and clean visual structure.</p></article>
+ </div>
+</section>
+
+<section class="gallery" id="gallery">
+ <div class="section-head"><div><div class="eyebrow">A visual moodboard</div><h2>Ink inspiration</h2></div><p>Browse tattoo-craft photography for visual inspiration. These are reference images, not verified Inkfinity client work.</p></div>
+ <div class="filters"><button class="filter active" data-filter="all">All photos</button><button class="filter" data-filter="studio">Studio</button><button class="filter" data-filter="art">Tattoo art</button></div>
+ <div class="gallery-grid">
+  <div class="gallery-item" data-category="studio"><img src="https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1000&q=85" alt="Tattoo artist working in studio" loading="lazy"><span>The craft</span></div>
+  <div class="gallery-item" data-category="art"><img src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=900&q=85" alt="Tattoo artwork close-up" loading="lazy"><span>Ink detail</span></div>
+  <div class="gallery-item" data-category="studio"><img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=900&q=85" alt="Tattoo studio work" loading="lazy"><span>Artist at work</span></div>
+  <div class="gallery-item" data-category="art"><img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=900&q=85" alt="Tattoo design inspiration" loading="lazy"><span>Expression</span></div>
+  <div class="gallery-item" data-category="art"><img src="https://images.unsplash.com/photo-1590246814883-57c511e7a1a3?auto=format&fit=crop&w=900&q=85" alt="Tattoo art inspiration" loading="lazy"><span>Line & form</span></div>
+  <div class="gallery-item" data-category="studio"><img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=900&q=85" alt="Tattoo equipment and studio detail" loading="lazy"><span>Studio details</span></div>
+ </div>
+</section>
+
+<section class="booking" id="booking">
+ <div class="booking-layout">
+  <div class="booking-copy"><div class="eyebrow">Plan a conversation</div><h2>Start with an<br><span class="gold">idea.</span></h2>
+   <p>Use this sample form to explore the booking experience. It runs entirely in your browser and does not send information to a studio or create a real appointment.</p>
+   <ul class="booking-points"><li>Choose an artwork style</li><li>Select a preferred date</li><li>Share a short design brief</li><li>Review your request before submitting</li></ul>
+   <p class="gold">Ludhiana, Punjab, India</p>
+  </div>
+  <form class="form-card" id="bookingForm">
+   <h3>Consultation request</h3><p>Demo interaction · No details are transmitted or stored.</p>
+   <div class="form-grid">
+    <div class="field"><label for="fullName">Your name</label><input id="fullName" name="name" type="text" placeholder="Enter your name" required></div>
+    <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+    <div class="field"><label for="style">Preferred style</label><select id="style" name="style" required><option value="">Choose a style</option><option>Fine Line</option><option>Blackwork</option><option>Realism</option><option>Geometric</option><option>Not sure yet</option></select></div>
+    <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" required></div>
+    <div class="field full"><label for="idea">Design idea</label><textarea id="idea" name="idea" placeholder="Describe your idea (optional)"></textarea></div>
+   </div>
+   <label class="check"><input type="checkbox" id="adult" required><span>I confirm I am 18 or older and understand that this is a demonstration form, not a real appointment request.</span></label>
+   <button class="btn primary" type="submit">Preview my request</button>
+   <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+ <div class="notice"><strong>Important:</strong> This is a sample portfolio website, not a verified business listing or live booking service. No appointment can be made through this form. Tattooing is permanent and carries health risks. It is intended for adults only; check local laws and consult a qualified professional before making any decision.</div>
+</section>
+
+<section class="faq" id="faq">
+ <div class="section-head"><div><div class="eyebrow">Good to know</div><h2>Quick FAQs</h2></div><p>Useful questions to consider before speaking with a professional tattoo artist.</p></div>
+ <div class="faq-list">
+  <div class="faq-item"><button class="faq-q">How should I choose a design? <span>+</span></button><div class="faq-a">Collect references, think about what the design means to you, and discuss size, placement and long-term considerations with a qualified artist. Avoid rushing the decision.</div></div>
+  <div class="faq-item"><button class="faq-q">Are tattoos permanent? <span>+</span></button><div class="faq-a">Yes. Tattoo pigment is intended to remain in the skin. Removal can be difficult, costly and may not completely remove the design, so consider permanence carefully.</div></div>
+  <div class="faq-item"><button class="faq-q">What should I ask a studio about hygiene? <span>+</span></button><div class="faq-a">Ask about sterile single-use needles, clean work areas, hand hygiene, protective equipment, aftercare instructions and the artist's training and credentials.</div></div>
+  <div class="faq-item"><button class="faq-q">Does this website confirm an appointment? <span>+</span></button><div class="faq-a">No. The booking form is a front-end demonstration only. It does not send, save or confirm any appointment details.</div></div>
+ </div>
+</section>
+</main>
+<footer><div class="footer-logo">INK<span>FINITY</span>.</div><div>Ludhiana, Punjab, India</div><div>© <span id="year"></span> Inkfinity Tattoo Studio · Concept website</div></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+const dateInput=document.getElementById('date');
+const today=new Date();dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ document.querySelectorAll('.gallery-item').forEach(item=>item.hidden=btn.dataset.filter!=='all'&&item.dataset.category!==btn.dataset.filter);
+}));
+document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{
+ const item=btn.parentElement;item.classList.toggle('open');btn.querySelector('span').textContent=item.classList.contains('open')?'−':'+';
+}));
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault();const form=e.currentTarget;
+ if(!form.reportValidity())return;
+ const data=new FormData(form);
+ const msg=document.getElementById('formMsg');
+ msg.textContent='Demo preview only: '+data.get('name')+' — '+data.get('style')+' — preferred date '+data.get('date')+'. Your information has not been sent or saved. This is NOT an appointment confirmation.';
+ msg.classList.add('show');
+});
+/* Fallback keeps a failed remote image from leaving an empty gallery tile. */
+document.querySelectorAll('img').forEach(img=>img.addEventListener('error',()=>{
+ if(!img.dataset.fallback){img.dataset.fallback='1';img.src='https://images.unsplash.com/photo-1546105444-1fbb32bc1162?auto=format&fit=crop&w=1100&q=85';}
+}));
+</script>
+</body>
+</html>
